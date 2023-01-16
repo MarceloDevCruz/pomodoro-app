@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-weight: 200; }
+
+body {
+  font-size: 1.4rem;
+  font-family: 'KoHo', sans-serif;
+  color: #23D1C0; }
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: none; }
+
+a,
+a:link,
+a:visited {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer; }
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit; }
+
+ul {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  color: #4EC295; }
