@@ -1,0 +1,74 @@
+.btn {
+
+  width: 16rem;
+  height: 5.5rem;
+  border: 1px solid rgba($color-primary, .2);
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  font-size: 2.5rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  text-align: center;
+  display: block;
+  margin: 2rem;
+
+  @include respond(phone) {
+    width: 12rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-height: 500px) {
+    width: 12rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    background-color: rgba($color-primary, .1);
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 17%;
+    right: -9%;
+    font-size: 6.5rem;
+    cursor: pointer;
+
+    @include respond(phone) {
+      font-size: 4.5rem;
+      top: 22%;
+      right: 0;
+    }
+
+    @media only screen and (max-height: 500px) {
+      font-size: 4.5rem;
+      top: 22%;
+      right: 0;
+    }
+
+    &-transparent {
+      color: $color-background;
+      font-size: 5rem;
+      top: 25%;
+      right: -4%;
+
+
+      @include respond(phone) {
+        font-size: 3rem;
+        top: 32%;
+        right: 4.5%;
+      }
+
+      @media only screen and (max-height: 500px) {
+        font-size: 3rem;
+        top: 32%;
+        right: 4.5%;
+      }
+    }
+  }
+}

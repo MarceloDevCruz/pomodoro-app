@@ -15,6 +15,7 @@ body {
   font-size: 1.4rem;
   font-family: 'KoHo', sans-serif;
   color: $color-primary;
+  background: radial-gradient(100% 100% at 50% 0%, $color-background 0%, $color-black 100%);
 }
 
 button {
@@ -48,6 +49,6 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 200;
   color: $color-secondary;
 }

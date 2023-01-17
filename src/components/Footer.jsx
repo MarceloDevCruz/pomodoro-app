@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p className="footer__text">Created By Marcelo Cruz</p>
-      <BsGithub className="footer__icon" />
+      <a href="https://github.com/MarceloDevCruz/instagram" target="_blank">
+        <BsGithub className="footer__icon" />{' '}
+      </a>
     </footer>
   );
 };

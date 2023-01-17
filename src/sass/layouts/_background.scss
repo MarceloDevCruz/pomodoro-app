@@ -1,0 +1,88 @@
+%absolute {
+  position: absolute;
+}
+
+.background {
+
+  &__moon {
+    @extend %absolute;
+    top: 2%;
+    left: 21%;
+    font-size: 20rem;
+    filter: drop-shadow(78px 56px 100px $color-primary);
+
+    @include respond(tab-port) {
+      font-size: 15rem;
+      top: 1%;
+      left: 17%;
+    }
+
+    @media only screen and (max-height: 650px) {
+      font-size: 15rem;
+      top: 0;
+      left: 5%;
+      rotate: 45deg;
+    }
+
+    @media only screen and (max-height: 450px) {
+      font-size: 10rem;
+      top: 0;
+      left: 3%;
+      rotate: 45deg;
+    }
+
+    @include respond(phone) {
+      font-size: 10rem;
+      top: 0;
+      left: 5%;
+      rotate: 45deg;
+    }
+  }
+
+  &__fs {
+
+    &--1 {
+      @extend %absolute;
+      font-size: 2rem;
+      top: 31%;
+      left: 72%;
+      filter: drop-shadow(5px -7px 19px $color-primary);
+    }
+
+    &--2 {
+      @extend %absolute;
+      font-size: 5rem;
+      top: 72%;
+      left: 69%;
+      filter: drop-shadow(5px -7px 19px $color-primary);
+    }
+  }
+
+  &__star {
+
+    &--1 {
+      @extend %absolute;
+      font-size: 1rem;
+      top: 8%;
+      left: 84%;
+      filter: drop-shadow(5px -7px 19px $color-primary);
+    }
+
+    &--2 {
+      @extend %absolute;
+      font-size: 1.4rem;
+      top: 63%;
+      left: 30%;
+      filter: drop-shadow(5px -7px 19px $color-primary);
+    }
+
+    &--3 {
+      @extend %absolute;
+      font-size: 1.2rem;
+      top: 4%;
+      left: 52%;
+      filter: drop-shadow(5px -7px 19px $color-primary);
+    }
+  }
+}
+

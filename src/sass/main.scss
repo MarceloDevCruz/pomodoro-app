@@ -3,9 +3,12 @@
 @import './base/reset';
 @import './base/animation';
 @import './components/button';
-@import './layouts/footer.scss';
-@import './layouts/header.scss';
-@import './layouts/main.scss';
-@import './layouts/sidebar.scss';
-@import './layouts/container.scss';
+
+@import './layouts/container';
+@import './layouts/footer';
+@import './layouts/header';
+@import './layouts/main';
+@import './layouts/scrollbar';
+@import './layouts/sidebar';
+@import './layouts/background';
 
