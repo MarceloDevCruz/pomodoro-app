@@ -1,0 +1,38 @@
+.input {
+
+  &__container {
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgba($color-menu, .6);
+    border-radius: 10px;
+    width: 60%;
+    height: 4rem;
+    color: inherit;
+    font-family: inherit;
+    padding: 2rem;
+    margin-top: 1rem;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  &__text {
+
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+
+    &-error {
+      font-size: 1.5rem;
+      color: $color-error;
+      letter-spacing: 2px;
+    }
+  }
+}
