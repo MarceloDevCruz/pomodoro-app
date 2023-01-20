@@ -38,6 +38,7 @@
     right: -9%;
     font-size: 6.5rem;
     cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba($color-primary, .4));
 
     @include respond(phone) {
       font-size: 4.5rem;
@@ -55,7 +56,7 @@
       color: $color-background;
       font-size: 5rem;
       top: 25%;
-      right: -4%;
+      right: -5%;
 
 
       @include respond(phone) {
