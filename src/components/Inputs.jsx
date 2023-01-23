@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from 'react';
 import secondsTime from '../utils/secondsTime';
 import { ConfigsContext } from '../redux/configRedux';
 
-const Inputs = ({ title, value, type }) => {
+const Inputs = ({ title, value, type, updateValue, validation }) => {
   const min = 1;
   const max = 3600;
 
@@ -18,8 +18,8 @@ const Inputs = ({ title, value, type }) => {
       ? setInputValue(undefined)
       : setInputValue(newValue);
 
-    console.log(type);
-    console.log(configs.time + `.${type}`);
+    updateValue(newValue);
+    console.log(configs.time);
   };
 
   return (
