@@ -56,7 +56,7 @@ const Main = () => {
           <BsFillPauseCircleFill onClick={handleButton} className="btn__icon" />
         )}
       </div>
-      <audio src={`../../public/alarm.wav`} ref={audio}></audio>
+      <audio src={`alarm.wav`} ref={audio}></audio>
     </main>
   );
 };
