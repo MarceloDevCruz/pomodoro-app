@@ -7,20 +7,11 @@ import secondsTime from '../utils/secondsTime';
 import { ConfigsContext } from '../redux/configRedux';
 
 const Sidebar = () => {
-  const min = 1;
-  const max = 3600;
-
   const [showButton, setShowButton] = useState(true);
   const { configs, updateConfigs, initialConfig, initialState } =
     useContext(ConfigsContext);
 
   const [time, setTime] = useState(configs.time);
-
-  const [inputValid, setInputValid] = useState({
-    activity: true,
-    shortPause: true,
-    longPause: true,
-  });
 
   const [activity, setActivity] = useState(configs.time.activity);
   const [shortPause, setShortPause] = useState(configs.time.shortPause);
@@ -42,18 +33,6 @@ const Sidebar = () => {
     setTime({ ...time, longPause: totalTime });
   };
 
-  const handleValidActivity = (valid) => {
-    setInputValid({ ...inputValid, activity: valid });
-  };
-
-  const handleValidShortPause = (valid) => {
-    setInputValid({ ...inputValid, shortPause: valid });
-  };
-
-  const handleValidLongPause = (valid) => {
-    setInputValid({ ...inputValid, longPause: valid });
-  };
-
   const saveConfig = () => {
     const newConfig = {
       time: time,
@@ -62,7 +41,10 @@ const Sidebar = () => {
     updateConfigs(newConfig);
   };
 
-  const resetConfig = () => {};
+  const resetConfig = () => {
+    updateConfigs(initialState);
+    initialConfig();
+  };
 
   return (
     <>
@@ -81,9 +63,7 @@ const Sidebar = () => {
                 <Inputs
                   title={'Intervalo Atividade'}
                   value={configs.time.activity}
-                  type={'activity'}
                   updateValue={handleActivity}
-                  validation={handleValidActivity}
                 />
               </div>
 
@@ -91,9 +71,7 @@ const Sidebar = () => {
                 <Inputs
                   title={'Intervalo Pausa Curta'}
                   value={configs.time.shortPause}
-                  type={'shortPause'}
                   updateValue={handleShortPause}
-                  validation={handleValidShortPause}
                 />
               </div>
 
@@ -101,9 +79,7 @@ const Sidebar = () => {
                 <Inputs
                   title={'Intervalo Pausa Longa'}
                   value={configs.time.longPause}
-                  type={'longPause'}
                   updateValue={handleLongPause}
-                  validation={handleValidLongPause}
                 />
               </div>
 

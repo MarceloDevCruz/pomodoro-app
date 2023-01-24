@@ -1,15 +1,12 @@
 import React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import secondsTime from '../utils/secondsTime';
-import { ConfigsContext } from '../redux/configRedux';
 
-const Inputs = ({ title, value, type, updateValue, validation }) => {
+const Inputs = ({ title, value, updateValue }) => {
   const min = 1;
   const max = 3600;
 
   const [inputValue, setInputValue] = useState(value);
-
-  const { configs, updateConfigs } = useContext(ConfigsContext);
 
   const handleOnChange = (e) => {
     const newValue = e.target.value;
@@ -19,7 +16,6 @@ const Inputs = ({ title, value, type, updateValue, validation }) => {
       : setInputValue(newValue);
 
     updateValue(newValue);
-    console.log(configs.time);
   };
 
   return (
