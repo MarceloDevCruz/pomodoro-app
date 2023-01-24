@@ -17,10 +17,20 @@
   top: 0;
   right: 0;
   padding: 5rem;
+  z-index: 30;
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media only screen and (max-width: 1350px) {
+    width: 33.33333%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    background-color: $color-black;
+  }
 
   &__icon {
     position: absolute;
